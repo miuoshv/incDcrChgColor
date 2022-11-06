@@ -4,9 +4,13 @@ const btnSizeDown = document.querySelector('.size-down')
 const btnChgColor = document.querySelector('.color')
 
 function textSizeUp() {
+	// pobiera wszystkie css values dla text
 	let textProperties = window.getComputedStyle(text)
+	// pobiera wartość font-size z text
 	let fontSizePx = textProperties.getPropertyValue('font-size')
+	//zmienia strina w int
 	let fontSizeVal = parseInt(fontSizePx)
+	//przypisuje nową wartość do fontsize
 	text.style.fontSize = fontSizeVal + 2 + 'px'
 	console.log(fontSizeVal)
 }
